@@ -20,7 +20,7 @@ const cards = [
   },
   {
     id: 2,
-    title: "Site Responsivo DESKTOP",
+    title: "Site Responsivo TABLET",
     image: Tablet,
     description: "Quando pressionado o botão Leia mais... a informação deve aparecer completa em um popup na tela.",
     btnText: "Leia mais...",
@@ -28,7 +28,7 @@ const cards = [
   },
   {
     id: 3,
-    title: "Site Responsivo DESKTOP",
+    title: "Site Responsivo MOBILE",
     image: Mobile,
     description: "Quando pressionado o botão Alterar tema... modifique o tema do site para blackfriday a se gosto.",
     btnText: "Alterar tema",

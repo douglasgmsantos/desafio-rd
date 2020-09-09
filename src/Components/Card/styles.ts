@@ -14,19 +14,32 @@ export const Header = styled.div<IDefaultProps>`
   padding: ${p => p.theme.spacing.default};
 `;
 
-export const Logo = styled.img`
-
-  `;
+export const Logo = styled.img``;
 
 export const Title = styled.div`
   color: ${ p => p.theme.colors.white};
   font-size: ${p => p.theme.fontSizes.huge};
   padding: ${p => p.theme.spacing.default};
   text-transform: capitalize;
+
+  @media (max-width: 1118px) {
+    font-size: ${p => p.theme.fontSizes.default};
+    padding: 1.0rem;
+  }
+
+
 `;
 
 export const Description = styled.div`
   padding: ${p => p.theme.spacing.default};
+
+  @media (max-width: 1140px) {
+    font-size: ${p => p.theme.fontSizes.small};
+  }
+
+  @media (max-width: 965px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Footer = styled.div`
@@ -40,4 +53,7 @@ export const BtnAction = styled.button<IDefaultProps>`
   color: ${p => p.theme.colors.white};
   border: none;
   padding: ${p => p.theme.spacing.default};
+  @media (max-width: 885px) {
+    width: 100%;
+  }
 `;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 
 import RD from "../../assets/rd.png";
 
@@ -6,7 +6,8 @@ import {
   Container,
   Logo,
   Menu,
-  MenuItem
+  MenuItem,
+  ListMenuIcon
 } from './styles';
 
 const itens = [
@@ -22,12 +23,20 @@ interface IMenu {
 }
 
 const Header: React.FC = () => {
+  const [activeMenu, setActiveMenu] = useState(false);
+  const openMenu = useCallback(() => {
+    setActiveMenu(activeMenu ? false : true)
+  }, [activeMenu]);
+
+
   return (
     <Container>
       <Logo src={RD} />
-      <Menu>
+      <ListMenuIcon onClick={() => openMenu()} size={40} />
+      <Menu className={activeMenu ? 'open' : ""}>
         {itens.map((item: IMenu) => (<MenuItem key={item.label}>{item.label}</MenuItem>))}
       </Menu>
+
     </Container>
   )
 }

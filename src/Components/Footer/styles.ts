@@ -6,7 +6,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items:center;
-  margin: ${p => p.theme.spacing.vertical};
+  margin-top: 1.6rem;
+
+    @media (max-width: 855px){
+      flex-direction: column;
+    }
 `;
 
 export const RightsLegal = styled.div`
@@ -14,6 +18,10 @@ export const RightsLegal = styled.div`
 `;
 
 export const Companies = styled.div`
+    @media (max-width: 855px){
+      margin: ${p => p.theme.spacing.vertical};
+    }
+
   img {
     margin: ${p => p.theme.spacing.horizontal};
   }
