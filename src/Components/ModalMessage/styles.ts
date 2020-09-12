@@ -1,16 +1,36 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
   background: ${p => p.theme.colors.white};
   height: 450px;
   max-height: 450px;
-  width: 387px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  @media (max-width: 870px) {
-    width: auto;
+  @media (max-width:465px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width:435px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width:405px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width:385px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width:365px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width:345px) {
+    padding: 0 60px;
   }
 
 `;
@@ -36,8 +56,6 @@ export const Title = styled.div`
     font-size: ${p => p.theme.fontSizes.default};
     padding: 1.0rem;
   }
-
-
 `;
 
 export const Description = styled.div`
