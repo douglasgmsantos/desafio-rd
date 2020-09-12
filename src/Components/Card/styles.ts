@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background: ${p => p.theme.colors.white};
+  height: 450px;
+  max-height: 450px;
+  max-width: 387px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 interface IDefaultProps {
@@ -20,7 +26,6 @@ export const Title = styled.div`
   color: ${ p => p.theme.colors.white};
   font-size: ${p => p.theme.fontSizes.huge};
   padding: ${p => p.theme.spacing.default};
-  text-transform: capitalize;
 
   @media (max-width: 1118px) {
     font-size: ${p => p.theme.fontSizes.default};
@@ -39,6 +44,14 @@ export const Description = styled.div`
 
   @media (max-width: 965px) {
     font-size: 1.4rem;
+  }
+
+  &.scroll-down{
+    padding: 1.6rem;
+    width: 100%;
+    overflow: auto;
+    text-overflow: ellipsis;
+    height: 100px;
   }
 `;
 
