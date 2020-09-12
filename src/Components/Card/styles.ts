@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid #FFF;
 
   @media (max-width: 870px) {
     width: auto;

@@ -27,7 +27,11 @@ export const Menu = styled.ul`
       top: 0;
       left: 0;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.8)
+      background: rgba(255, 255, 255, 0.8);
+
+      li{
+        color: ${p => p.theme.colors.white};
+      }
     }
   }
 

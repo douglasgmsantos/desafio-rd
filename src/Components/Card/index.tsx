@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import ModalMessage from '../ModalMessage';
+import { useTheme } from '../../hooks/theme';
 
 import {
   Container,
@@ -8,10 +9,8 @@ import {
   Title,
   Description,
   Footer,
-  BtnAction
+  BtnAction,
 } from './styles';
-
-
 
 interface ICard {
   id: number;
@@ -36,8 +35,16 @@ const Card: React.FC<ICard> = ({
   bg,
   action
 }) => {
+  const { toggleTheme } = useTheme();
   const [scrollDownContent, setScrollDownContent] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+
+  function toggleScroll(): void {
+    setScrollDownContent(scrollDownContent ? false : true)
+  }
+
+  const changeTheme = useCallback(() => toggleTheme(), [toggleTheme]);
+  const toggleModal = useCallback(() => setOpenModal(openModal ? false : true), [openModal]);
 
   const handleAction = useCallback(() => {
     switch (action) {
@@ -50,6 +57,7 @@ const Card: React.FC<ICard> = ({
         break;
 
       case "change-therme":
+        changeTheme();
         break;
 
       default:
@@ -57,15 +65,7 @@ const Card: React.FC<ICard> = ({
         break;
     }
 
-  }, [action, scrollDownContent]);
-
-  function toggleScroll(): void {
-    setScrollDownContent(scrollDownContent ? false : true)
-  }
-
-  function toggleModal(): void {
-    setOpenModal(openModal ? false : true)
-  }
+  }, [action, changeTheme, toggleModal, toggleScroll]);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import ReactModal from 'react-modal';
-import theme from '../../styles/theme';
+import theme from '../../styles/theme/light';
 
 interface IModalProps {
   children: any;
@@ -30,7 +30,7 @@ const Modal: React.FC<IModalProps> = ({ children, isOpen, setIsOpen }) => {
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
-          background: '#F0F0F5',
+          background: 'transparent',
           color: theme.colors.grey,
           borderRadius: '8px',
           width: '500px',

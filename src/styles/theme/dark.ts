@@ -1,12 +1,13 @@
 export default {
+  title: "dark",
   colors: {
-    background: '#E5E5E5',
-    primary: '#007F56',
-    grey: '#868686',
-    orange: '#FE9481',
-    yellow: '#FCDA92',
-    purple: '#9C8CB9',
-    white: "#FFF",
+    background: '#000',
+    primary: '#00FA9A',
+    grey: '#FFF',
+    orange: '#CD5C5C',
+    yellow: '#FFD700',
+    purple: '#8A2BE2',
+    white: "#000",
 
   },
   fontSizes: {

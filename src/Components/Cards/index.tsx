@@ -1,5 +1,5 @@
 import React from 'react';
-import theme from '../../styles/theme';
+import theme from '../../styles/theme/light';
 
 import Desktop from '../../assets/desktop.png';
 import Tablet from '../../assets/tablet.png';
